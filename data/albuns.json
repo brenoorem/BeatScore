@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Avenged Sevenfold",
+    "artist": "Avenged Sevenfold",
+    "cover": "https://i.scdn.co/image/ab67616d0000b27333c52ca8309741c6999ca742",
+    "rating": 4.5,
+    "description": "Álbum marcante com sonoridade mais experimental da banda."
+  },
+  {
+    "id": 2,
+    "title": "Blonde",
+    "artist": "Frank Ocean",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/a/a0/Blonde_-_Frank_Ocean.jpeg",
+    "rating": 4.8,
+    "description": "Álbum introspectivo e emocional, considerado um clássico moderno."
+  },
+  {
+    "id": 3,
+    "title": "AM",
+    "artist": "Arctic Monkeys",
+    "year": 2013,
+    "genre": "Indie Rock",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/0/04/Arctic_Monkeys_-_AM.png",
+    "rating": 4.7,
+    "description": "Um dos álbuns mais icônicos do Arctic Monkeys, com riffs marcantes e atmosfera noturna."
+  },
+  {
+    "id": 4,
+    "title": "To Pimp a Butterfly",
+    "artist": "Kendrick Lamar",
+    "year": 2015,
+    "genre": "Hip Hop",
+    "cover": "https://upload.wikimedia.org/wikipedia/pt/c/c9/To_Pimp_a_Butterfly.jpg",
+    "rating": 4.9,
+    "description": "Álbum revolucionário que mistura jazz, funk e rap com forte crítica social."
+  },
+  {
+    "id": 5,
+    "title": "Currents",
+    "artist": "Tame Impala",
+    "year": 2015,
+    "genre": "Psychedelic Pop",
+    "cover": "https://upload.wikimedia.org/wikipedia/pt/2/2d/Currents_Tame_Impala.png",
+    "rating": 4.8,
+    "description": "Mistura de psicodelia com pop moderno, com produção extremamente refinada."
+  },
+  {
+    "id": 6,
+    "title": "Random Access Memories",
+    "artist": "Daft Punk",
+    "year": 2013,
+    "genre": "Electronic",
+    "cover": "https://upload.wikimedia.org/wikipedia/pt/7/76/Random_Access_Memories_capa.jpg",
+    "rating": 4.8,
+    "description": "Uma homenagem à música disco com produção impecável e som analógico."
+  },
+  {
+    "id": 7,
+    "title": "The Dark Side of the Moon",
+    "artist": "Pink Floyd",
+    "year": 1973,
+    "genre": "Progressive Rock",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png",
+    "rating": 5.0,
+    "description": "Clássico absoluto do rock progressivo, conhecido por sua coesão e conceito."
+  },
+  {
+    "id": 8,
+    "title": "Abbey Road",
+    "artist": "The Beatles",
+    "year": 1969,
+    "genre": "Rock",
+    "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/The_Beatles_Abbey_Road_album_cover.jpg/1280px-The_Beatles_Abbey_Road_album_cover.jpg",
+    "rating": 5.0,
+    "description": "Um dos álbuns mais influentes da história da música."
+  },
+  {
+    "id": 9,
+    "title": "Graduation",
+    "artist": "Kanye West",
+    "year": 2007,
+    "genre": "Hip Hop",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/7/70/Graduation_%28album%29.jpg",
+    "rating": 4.6,
+    "description": "Álbum que marcou a transição do hip hop para uma estética mais pop."
+  },
+  {
+    "id": 10,
+    "title": "Back to Black",
+    "artist": "Amy Winehouse",
+    "year": 2006,
+    "genre": "Soul",
+    "cover": "https://upload.wikimedia.org/wikipedia/pt/9/93/Capa_de_Back_to_Black.jpg",
+    "rating": 4.7,
+    "description": "Um álbum emocional e poderoso com forte influência do soul e jazz."
+  }
+]

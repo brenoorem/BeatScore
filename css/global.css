@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f1115;
+  color: white;
+}
+
+.navbar {
+  padding: 20px;
+  background: #151821;
+  color: #9600ff;
+  font-weight: bold;
+}
+
+.container {
+  padding: 20px;
+}

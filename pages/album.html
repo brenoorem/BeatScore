@@ -3,143 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <title>BeatScore</title>
-  <link rel="stylesheet" href="../assets/css/album.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/album.css">
 </head>
 <body>
-  <!-- NAVBAR -->
-  <div class="navbar">
-    <div class="logo">BeatScore</div>
-    <div class="menu">
-      <a href="#">Início</a>
-      <a href="#">Explorar</a>
-      <a href="#">Pesquisar</a>
-      <a href="#">Perfil</a>
-    </div>
-    <div class="search">
-      <input placeholder="Pesquisar álbuns ou artistas">
-      <button>Pesquisar</button>
-    </div>
-  </div>
 
-  <!-- MAIN -->
-  <div class="container">
-    <div>
-      <!-- ALBUM HEADER -->
-      <div class="album-header">
-        <img class="album-cover" src="https://picsum.photos/300">
-        <div class="album-info">
-          <h1>Horizonte Elétrico</h1>
-          <p>Orquestra Astral • 2021 • Indie Eletrônica</p>
-          <div class="rating">
-            ⭐ 4.6 / 5
-          </div>
-          <p>
-            Uma fusão de sintetizadores vintage e arranjos orquestrais que explora
-            paisagens sonoras expansivas e melodias emotivas.
-          </p>
-          <div class="actions">
-            <button class="favorite">Favoritar Álbum</button>
-            <button class="review-btn">Escrever Review</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- FILTER -->
-      <div class="filter">
-        <div>
-          Ordenar por: <b>Mais recentes</b>
-        </div>
-        <div>
-          432 reviews
-        </div>
-      </div>
-
-      <!-- REVIEWS -->
-      <div class="review">
-        <img src="https://i.pravatar.cc/100?img=1">
-        <div class="review-content">
-          <div class="review-header">
-            <strong>Marina Costa</strong>
-            <span>⭐⭐⭐⭐⭐</span>
-          </div>
-          <p>
-            Viagem sonora impecável. A produção é rica e as transições entre faixas
-            são muito bem pensadas.
-          </p>
-        </div>
-      </div>
-      <div class="review">
-        <img src="https://i.pravatar.cc/100?img=2">
-        <div class="review-content">
-          <div class="review-header">
-            <strong>Rafael Mendes</strong>
-            <span>⭐⭐⭐⭐</span>
-          </div>
-          <p>
-            Algumas faixas realmente elevam a experiência, mas outras parecem
-            curtas demais.
-          </p>
-        </div>
-      </div>
-      <div class="review">
-        <img src="https://i.pravatar.cc/100?img=3">
-        <div class="review-content">
-          <div class="review-header">
-            <strong>Clara Sousa</strong>
-            <span>⭐⭐⭐⭐⭐</span>
-          </div>
-          <p>
-            Sem dúvida um dos discos do ano para mim.
-            Atmosfera cinematográfica do início ao fim.
-          </p>
-        </div>
-      </div>
-
-      <!-- REVIEW FORM -->
-      <div class="review-form">
-        <h3>Escrever uma review</h3>
-        <input placeholder="Título da review">
-        <textarea placeholder="Escreva sua review detalhada..."></textarea>
-        <button>Enviar review</button>
-      </div>
-    </div>
-
-    <!-- SIDEBAR -->
-    <div>
-      <div class="sidebar-card">
-        <h3>Estatísticas</h3>
-        <div class="stat">Reviews: 432</div>
-        <div class="stat">Média: ⭐ 4.4</div>
-        <div class="stat">Popularidade: Alta</div>
-      </div>
-      <div class="sidebar-card">
-        <h3>Álbuns relacionados</h3>
-        <div class="related-album">
-          <img src="https://picsum.photos/50?1">
-          <span>Noites Neon</span>
-        </div>
-        <div class="related-album">
-          <img src="https://picsum.photos/50?2">
-          <span>Marés e Estrelas</span>
-        </div>
-        <div class="related-album">
-          <img src="https://picsum.photos/50?3">
-          <span>Circuito Lunar</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <div class="footer">
-    ©️ 2026 ÁlbumAvalia
-  </div>
-</body>
-</html>
-
-<div class="footer">
-©️ 2026 ÁlbumAvalia
+<div class="navbar">
+  <a href="../index.html" class="logo">BeatScore</a>
 </div>
 
+<div class="container">
+
+  <div class="album-header">
+    <img class="album-cover">
+    <div>
+      <h1></h1>
+      <p class="artist"></p>
+      <p class="rating"></p>
+      <p class="description"></p>
+
+      <button onclick="favoriteAlbum()">⭐ Favoritar</button>
+    </div>
+  </div>
+
+  <div class="review-form">
+    <h3>Adicionar review</h3>
+    <textarea id="reviewText"></textarea>
+    <button onclick="addReview()">Enviar</button>
+  </div>
+
+  <div class="reviews"></div>
+
+</div>
+
+<script src="../js/album.js"></script>
 </body>
 </html>
