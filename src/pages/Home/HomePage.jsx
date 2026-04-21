@@ -1,36 +1,15 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import AlbumCard from '../../components/AlbumCard'
+import { ALBUMS, formatCount } from '../../data/albums'
 
 /* ─── Dados mockados ─────────────────────────────── */
-const FEATURED = {
-  title: 'Chromakopia',
-  artist: 'Tyler, The Creator',
-  year: 2024,
-  rating: 9.1,
-  totalRatings: '12.4k',
-  comment: 'Obra-prima moderna que vai definir a década',
-  gradient: 'from-violet-900 via-purple-800 to-[#0d0d0f]',
-}
+const FEATURED = ALBUMS[0]   // Chromakopia como destaque
 
-const POPULAR = [
-  { title: 'Chromakopia',       artist: 'Tyler, Creator',     rating: 9.1, status: 'ouvido' },
-  { title: "Short n' Sweet",    artist: 'Sabrina Carpenter',  rating: 8.7 },
-  { title: 'GNX',               artist: 'Kendrick Lamar',     rating: 8.2 },
-  { title: 'Bright Future',     artist: 'Adrianne Lenker',    rating: 8.4 },
-  { title: 'Manning Fireworks', artist: 'MJ Lenderman',       rating: 7.9 },
-  { title: 'Imaginal Disk',     artist: 'Magdalena Bay',      rating: 8.9 },
-]
-
-const TOP_RATED = [
-  { title: 'Imaginal Disk',     artist: 'Magdalena Bay',      rating: 8.9 },
-  { title: 'Diamond Jubilee',   artist: 'Cindy Lee',          rating: 9.3 },
-  { title: 'Desire, I Want…',   artist: 'Mk.gee',             rating: 8.6 },
-  { title: 'Endlessness',       artist: 'Nala Sinephro',      rating: 8.8 },
-  { title: 'Bright Future',     artist: 'Adrianne Lenker',    rating: 8.4 },
-  { title: 'Manning Fireworks', artist: 'MJ Lenderman',       rating: 7.9 },
-]
+const POPULAR   = ALBUMS.slice(0, 6)
+const TOP_RATED = [...ALBUMS].sort((a, b) => b.rating - a.rating).slice(0, 6)
 
 const FEED_ITEMS = [
   {
@@ -169,7 +148,7 @@ export default function HomePage() {
       <Navbar />
 
       {/* Hero */}
-      <section className={`relative bg-gradient-to-r ${FEATURED.gradient} overflow-hidden`}>
+      <section className="relative bg-gradient-to-r from-violet-900 via-purple-800 to-[#0d0d0f] overflow-hidden">
         {/* Grade decorativa sutil */}
         <div
           className="absolute inset-0 opacity-[0.03]"
@@ -179,8 +158,10 @@ export default function HomePage() {
         />
 
         <div className="relative max-w-7xl mx-auto px-6 py-14 flex items-end gap-8">
-          {/* Capa do álbum */}
-          <div className="hidden sm:block w-36 h-36 rounded-xl bg-gradient-to-br from-violet-500 to-pink-500 shadow-2xl shadow-purple-900/60 shrink-0" />
+          {/* Capa do álbum — clicável */}
+          <Link to={`/album/${FEATURED.id}`} className="hidden sm:block shrink-0">
+            <div className={`w-36 h-36 rounded-xl bg-gradient-to-br ${FEATURED.gradient} shadow-2xl shadow-purple-900/60 hover:scale-105 transition-transform duration-200`} />
+          </Link>
 
           {/* Info */}
           <div className="flex-1 animate-slide-up">
@@ -196,7 +177,7 @@ export default function HomePage() {
             <div className="flex items-center gap-4 mt-5 flex-wrap">
               <div className="flex items-center gap-1.5 bg-black/30 px-3 py-1.5 rounded-lg">
                 <span className="text-yellow-400 text-lg font-bold">{FEATURED.rating}</span>
-                <span className="text-gray-500 text-xs">/ 10 · {FEATURED.totalRatings} avaliações</span>
+                <span className="text-gray-500 text-xs">/ 10 · {formatCount(FEATURED.totalRatings)} avaliações</span>
               </div>
               <button className="btn-primary">
                 + Marcar como ouvido
