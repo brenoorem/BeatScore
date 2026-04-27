@@ -29,6 +29,7 @@ function StarRating({ value, onChange }) {
       {Array.from({ length: 10 }, (_, i) => i + 1).map((star) => (
         <button
           key={star}
+          type='button'
           onMouseEnter={() => setHovered(star)}
           onMouseLeave={() => setHovered(null)}
           onClick={() => onChange(star)}
@@ -146,7 +147,6 @@ function ReviewForm({ albumTitle }) {
   const STATUS_OPTS = [
     { value: 'ouvido',      label: '✓ Ouvido'       },
     { value: 'ouvindo',     label: '▶ Ouvindo'      },
-    { value: 'quero-ouvir', label: '◈ Quero ouvir'  },
   ]
 
   function handleSubmit(e) {
@@ -213,16 +213,8 @@ function ReviewForm({ albumTitle }) {
             onChange={(e) => setText(e.target.value)}
             placeholder={`O que você achou de "${albumTitle}"?`}
             rows={4}
-            className="w-full bg-white/4 border border-white/8 hover:border-white/15 focus:border-brand-600 rounded-lg px-3 py-2.5 text-gray-300 text-sm placeholder-gray-700 outline-none transition-colors resize-none"
+            className="w-full bg-gray-800 border border-gray-700 hover:border-gray-500 focus:border-brand-600 rounded-lg px-3 py-2.5 text-gray-100 text-sm placeholder-gray-400 outline-none transition-colors resize-none"
           />
-          <div className="flex justify-between mt-1">
-            <span className="text-gray-700 text-xs">
-              {text.length > 0 && text.split(/\s+/).filter(Boolean).length < 20
-                ? '💡 Reviews com +20 palavras aparecem em destaque'
-                : ''}
-            </span>
-            <span className="text-gray-700 text-xs">{text.length}/1000</span>
-          </div>
         </div>
 
         <button
@@ -483,7 +475,7 @@ export default function AlbumPage() {
           </div>
 
           {/* Similares */}
-          {similar.length > 0 && (
+          {/* {similar.length > 0 && (
             <div className="card p-5">
               <h3 className="text-gray-500 text-[10px] uppercase tracking-wider mb-4">Você também pode gostar</h3>
               <div className="flex flex-col gap-3">
@@ -507,7 +499,7 @@ export default function AlbumPage() {
                 ))}
               </div>
             </div>
-          )}
+          )} */}
         </aside>
       </main>
 
