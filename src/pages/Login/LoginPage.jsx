@@ -113,7 +113,8 @@ export default function LoginPage() {
 
         {/* OAuth (visual apenas) */}
         <div className="flex gap-3">
-          {['Google', 'Spotify', 'Apple'].map((provider) => (
+          {/* {['Google', 'Spotify', 'Apple'].map((provider) => ( */}
+          {['Google'].map((provider) => (
             <button
               key={provider}
               className="flex-1 btn-secondary py-2 text-xs"

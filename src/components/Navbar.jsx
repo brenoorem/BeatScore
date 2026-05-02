@@ -4,8 +4,6 @@ import { useState } from 'react'
 const NAV_LINKS = [
   { label: 'Feed',     to: '/' },
   { label: 'Explorar', to: '/explorar' },
-  { label: 'Listas',   to: '/listas' },
-  { label: 'Reviews',  to: '/reviews' },
 ]
 
 export default function Navbar() {
@@ -85,6 +83,12 @@ export default function Navbar() {
           >
             Entrar
           </Link>
+
+          {/* Avatar — link para o perfil (quando logado, trocar o Link pelo avatar real) */}
+          <Link
+            to="/usuario/marina_sounds"
+            className="w-8 h-8 rounded-full bg-gradient-to-br from-violet-600 to-pink-500 shrink-0 ring-2 ring-transparent hover:ring-brand-600 transition-all"
+          />
         </div>
       </nav>
     </header>

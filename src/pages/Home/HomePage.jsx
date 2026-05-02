@@ -172,7 +172,7 @@ export default function HomePage() {
               {FEATURED.title}
             </h1>
             <p className="text-purple-300 text-lg mt-1">{FEATURED.artist}</p>
-            <p className="text-gray-500 text-sm mt-1 italic">"{FEATURED.comment}"</p>
+            {/* <p className="text-gray-500 text-sm mt-1 italic">"{FEATURED.comment}"</p> */}
 
             <div className="flex items-center gap-4 mt-5 flex-wrap">
               <div className="flex items-center gap-1.5 bg-black/30 px-3 py-1.5 rounded-lg">

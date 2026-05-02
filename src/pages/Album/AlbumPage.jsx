@@ -145,8 +145,8 @@ function ReviewForm({ albumTitle }) {
   const [submitted, setSubmitted] = useState(false)
 
   const STATUS_OPTS = [
-    { value: 'ouvido',      label: '✓ Ouvido'       },
-    { value: 'ouvindo',     label: '▶ Ouvindo'      },
+    { value: 'ouvido',      label: '✓ Ouvido'},
+    { value: 'ouvindo',     label: '▶ Ouvindo'},
   ]
 
   function handleSubmit(e) {
